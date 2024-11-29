@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Strava Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Recent Activities</h1>
+    <ul>
+        {% for activity in activities %}
+        <li>
+            <strong>{{ activity.name }}</strong><br>
+            Distance: {{ activity.distance }} meters<br>
+            Average Speed: {{ activity.average_speed }} m/s<br>
+            Elevation Gain: {{ activity.total_elevation_gain }} meters
+        </li>
+        {% endfor %}
+    </ul>
+    <h2>Activity Metrics</h2>
+    <div class="metrics">
+        <img src="{{ url_for('static', filename='activity_distances.png') }}" alt="Distances of Activities" >
+        <img src="{{ url_for('static', filename='activity_speeds.png') }}" alt="Average Speeds of Activities">
+        <img src="{{ url_for('static', filename='activity_elevations.png') }}" alt="Elevation Gains of Activities">
+    </div>
+</body>
+</html>
