@@ -18,7 +18,7 @@ pip install requests Flask matplotlib
 -----------------------------------------
 Step 4: Stravia account is set up using my credentials already
 ----------------------------------------
-Step 5: Run the app.py to get the access token and replace the already set access token with new generated access token
+Step 5: Run the app.py to get the new access token that will be automatically send to fetch_data.py.
 ----------------------------------------------------------------------------------------------
 Step 6 : Run python fetch_data.py
 --------------------------------------
